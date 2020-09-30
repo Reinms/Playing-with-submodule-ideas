@@ -65,8 +65,8 @@
         }
 
         //Used to report errors during load, will be caught and cleanly prevent the submodule from loading.
-        private static void ReportLoadFailure() => throw new SubmoduleLoadFailureException<TModule>();
-        private static void ReportLoadFailure(Exception cause) => throw new SubmoduleLoadFailureException<TModule>(cause);
+        private protected static void ReportLoadFailure() => throw new SubmoduleLoadFailureException<TModule>();
+        private protected static void ReportLoadFailure(Exception cause) => throw new SubmoduleLoadFailureException<TModule>(cause);
 
         //Lots of room for logging helpers and many other things here.
     }
